@@ -1,11 +1,15 @@
 #include <cstdio>
+#include <cstddef>
 
 
 void insertion_sort(int a[], int N);
 void printArrayInts(int a[], int N );
 
 
-
+void myf(std::nullptr_t)
+{
+   printf("null pointer overload\n");
+}
 
 
 int main()
@@ -88,6 +92,57 @@ printf("true && !false: %d\n", t && !f);
 printf("true || false: %d\n", t || f); 
 printf("false || false: %d\n", f || f);
 
+
+
+// std::byte is C++17
+
+myf(nullptr); 
+
+int binary_literal_C14 = 0b11111111111111111111111111111111; 
+printf("%d\n",binary_literal_C14);
+printf("%u\n",binary_literal_C14);
+
+
+long binary_long_C14 = 0b1111111111111111111111111111111111111111111111111111111111111111;
+printf("%ld \n",binary_long_C14);   // long format
+printf("%lu \n",binary_long_C14);   // unsigned long format
+
+
+
+
+//char* c;
+//gets(c);   // deprecated in C++14 
+
+char a[100000]; 
+size_t val = sizeof(a);
+printf("%ld\n", val);
+
+
+size_t size_c = sizeof(char); 
+printf("char: %zd\n", size_c);
+size_t size_s = sizeof(short); 
+printf("short: %zd\n", size_s);
+size_t size_i = sizeof(int); 
+printf("int: %zd\n", size_i);
+size_t size_l = sizeof(long); 
+printf("long: %zd\n", size_l);
+
+size_t size_uc = sizeof(unsigned char); 
+printf("unsigned char: %zd\n", size_uc);
+size_t size_us = sizeof(unsigned short); 
+printf("unsigned short: %zd\n", size_us);
+size_t size_ui = sizeof(unsigned int); 
+printf("unsigned int: %zd\n", size_ui);
+size_t size_ul = sizeof(long); 
+printf("unsigned long: %zd\n", size_ul);
+
+
+size_t size_f= sizeof(float); 
+printf("float: %zd\n", size_f);
+size_t size_d = sizeof(double); 
+printf("double : %zd\n", size_d);
+size_t size_ld = sizeof(long double); 
+printf("long double : %zd\n", size_ld);
 
 return 0;
 
