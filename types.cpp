@@ -19,6 +19,7 @@ int main()
 printf("sizeof(short int) = %lu\n", sizeof(short int) );
 printf("sizeof(int) = %lu\n", sizeof(int) );
 printf("sizeof(long int) = %lu\n", sizeof(long int) );
+printf("sizeof(long long) = %lu\n", sizeof(long long) );
 printf("sizeof(float) = %lu\n", sizeof(float ) );
 printf("sizeof(double) = %lu\n", sizeof(double) );
 printf("sizeof(long double) = %lu\n", sizeof(long double) );
@@ -101,13 +102,12 @@ myf(nullptr);
 int binary_literal_C14 = 0b11111111111111111111111111111111; 
 printf("%d\n",binary_literal_C14);
 printf("%u\n",binary_literal_C14);
+printf("%x\n",binary_literal_C14);
 
 
 long binary_long_C14 = 0b1111111111111111111111111111111111111111111111111111111111111111;
 printf("%ld \n",binary_long_C14);   // long format
 printf("%lu \n",binary_long_C14);   // unsigned long format
-
-
 
 
 //char* c;
@@ -126,6 +126,9 @@ size_t size_i = sizeof(int);
 printf("int: %zd\n", size_i);
 size_t size_l = sizeof(long); 
 printf("long: %zd\n", size_l);
+size_t size_ll = sizeof(long long); 
+printf("long long: %zd\n", size_ll);
+
 
 size_t size_uc = sizeof(unsigned char); 
 printf("unsigned char: %zd\n", size_uc);
@@ -133,7 +136,7 @@ size_t size_us = sizeof(unsigned short);
 printf("unsigned short: %zd\n", size_us);
 size_t size_ui = sizeof(unsigned int); 
 printf("unsigned int: %zd\n", size_ui);
-size_t size_ul = sizeof(long); 
+size_t size_ul = sizeof(unsigned long); 
 printf("unsigned long: %zd\n", size_ul);
 
 
