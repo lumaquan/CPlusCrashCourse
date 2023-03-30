@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <cstddef>
+#include <iostream>
 
 
 void insertion_sort(int a[], int N);
@@ -14,6 +15,15 @@ void myf(std::nullptr_t)
 
 int main()
 {
+
+if (__cplusplus == 202101L) std::cout << "C++23";
+ else if (__cplusplus == 202002L) std::cout << "C++20";
+ else if (__cplusplus == 201703L) std::cout << "C++17";
+ else if (__cplusplus == 201402L) std::cout << "C++14";
+ else if (__cplusplus == 201103L) std::cout << "C++11";
+ else if (__cplusplus == 199711L) std::cout << "C++98";
+ else std::cout << "pre-standard C++." << __cplusplus;
+ std::cout << "\n";
 
 //	sizes of must important types in C++
 printf("sizeof(short int) = %lu\n", sizeof(short int) );
@@ -94,8 +104,7 @@ printf("true || false: %d\n", t || f);
 printf("false || false: %d\n", f || f);
 
 
-
-// std::byte is C++17
+//std::byte myb = 0;  //is C++17
 
 myf(nullptr); 
 
@@ -146,6 +155,11 @@ size_t size_d = sizeof(double);
 printf("double : %zd\n", size_d);
 size_t size_ld = sizeof(long double); 
 printf("long double : %zd\n", size_ld);
+
+
+int array[] = { 2,3,4,56, 7, 10 };
+
+
 
 return 0;
 
