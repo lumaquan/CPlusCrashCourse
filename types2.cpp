@@ -21,7 +21,7 @@ void printState(STATE state)
 	 		{
 				text = "Is created";	
 				break;
-			}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
+			}
 
 	 	case DESTROYED:
 			text = "Is destroyed";		
@@ -38,11 +38,40 @@ void printState(STATE state)
 }
 
 
+
+struct Book{
+char name[256];
+int year;
+int pages;
+bool harcover;
+};
+
+
+void printBook(Book book){
+ 	std::cout << book.name << std::endl;
+ 	std::cout << book.year << std::endl;
+ 	std::cout << book.pages << std::endl;
+ 	std::cout << book.hardcover << std::endl;
+ 	
+}
+
 int main()
 {
 
+
+
 STATE state = INSTANTIATED;
 printState(state);
+
+Book crashCourse;
+crashCourse.name[0] = 'A';
+crashCourse.name[1] = '\0';
+crashCourse.year = 2009;
+crashCourse.pages = 248;
+crashCourse.harcover = false;
+printBook(crashCourse);
+
+
 return 0;
 }
 
