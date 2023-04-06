@@ -102,13 +102,5 @@ std::cout << sizeof(v) << std::endl;
 std::cout << v.integer << std::endl;
 std::cout << v.mydouble << std::endl;
 
-
 return 0;
 }
-
-
-
-
-
-
-

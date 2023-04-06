@@ -81,7 +81,6 @@ idiom.printState();
 ProcessBlock processBlock = {2,1,0x454545,3.1416 };
 cout << processBlock.time << endl;
 
-
 int a_1[] = {1,2,3};
 int a_2[5] = {};
 int a_3[5] ={1,2,3,4,5};
