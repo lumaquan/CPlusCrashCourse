@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 
-
 using namespace std;
 
 struct Clock
@@ -18,9 +17,8 @@ struct Clock
         return year;
     }
 
-    private:
+private:
     int year;
-
 };
 
 class Setting
@@ -30,11 +28,10 @@ class Setting
     string title;
     string summary;
 
-    public:
+public:
+    Setting() : Setting(0, "NO_TITLE", "NO_SUMMARY") {}
 
-    Setting() :Setting(0, "NO_TITLE", "NO_SUMMARY"){}
-
-    Setting(int my_id) :Setting(my_id, "NO_TITLE", "NO_SUMMARY"){}
+    Setting(int my_id) : Setting(my_id, "NO_TITLE", "NO_SUMMARY") {}
 
     Setting(int my_id, string my_title, string my_summary)
     {
@@ -59,10 +56,7 @@ class Setting
         cout << "title = " << title << endl;
         cout << "summary = " << summary << endl;
     }
-
-
 };
-
 
 struct ProcessBlock
 {
@@ -75,29 +69,25 @@ struct ProcessBlock
 int main()
 {
 
-Clock clock;
-clock.add_year();
-clock.add_year();
-cout << clock.get_year() << endl;
+    Clock clock;
+    clock.add_year();
+    clock.add_year();
+    cout << clock.get_year() << endl;
 
-Setting idiom;
-idiom.printState();
-Setting color = Setting(1);
-color.printState();
-Setting guess{32};
-guess.printState();
+    Setting idiom;
+    idiom.printState();
+    Setting color = Setting(1);
+    color.printState();
+    Setting guess{32};
+    guess.printState();
 
-ProcessBlock processBlock = {2,1,0x454545,3.1416 };
-cout << processBlock.time << endl;
+    ProcessBlock processBlock = {2, 1, 0x454545, 3.1416};
+    cout << processBlock.time << endl;
 
-int a_1[] = {1,2,3};
-int a_2[5] = {};
-int a_3[5] ={1,2,3,4,5};
-int a_4[]{1,2,3};
+    int a_1[] = {1, 2, 3};
+    int a_2[5] = {};
+    int a_3[5] = {1, 2, 3, 4, 5};
+    int a_4[]{1, 2, 3};
 
-
-
-
-
-return 0; 
+    return 0;
 }

@@ -1,8 +1,7 @@
-#include <cstdio> 
+#include <cstdio>
 
 int main()
 {
-   printf("Hello, world!"); 
-   return 0; 
+   printf("Hello, world!");
+   return 0;
 }
-
