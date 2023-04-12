@@ -5,20 +5,36 @@
 
 using namespace std;
 
+
+
+
 class GameEntry
 {
 public:
     GameEntry(const string &n = "", int s = 0);
     string getName() const;
     int getScore() const;
+    bool operator==(const GameEntry& x) const;
 
 private:
     string name;
     int score;
 };
+
 GameEntry::GameEntry(const string &n, int s) : name(n), score(s) {}
 string GameEntry::getName() const { return name; }
 int GameEntry::getScore() const { return score; }
+bool GameEntry::operator==(const GameEntry &x) const
+{
+    return x.getName() == name && x.getScore() == score;
+}
+ostream& operator<<(ostream& out, GameEntry& e){
+    out << "( " << e.getName() << "," << e.getScore() << ")";
+    return out; 
+}
+
+
+
 
 class Scores
 {
@@ -89,6 +105,10 @@ void Scores::print()
     }
 }
 
+
+
+
+
 int main()
 {
 
@@ -106,9 +126,6 @@ int main()
     pscs->add(ge2);
     pscs->add(ge3);
     pscs->add(ge4);
-
-    scs.remove(50);
-
     scs.print();
 
     return 0;
