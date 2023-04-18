@@ -90,6 +90,7 @@ int main()
     cout << "rx = " << rx << endl;
     cout << "y = " << y << endl;
 
+    string name = "grande";
 
     return 0;
 }

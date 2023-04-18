@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -26,6 +27,8 @@ private:
     int year;
 };
 
+void increase(int& v);
+
 int main()
 {
 
@@ -42,5 +45,16 @@ int main()
     int arr[]{1, 23, 5};
     int *parr = arr;
 
+    int b = 100;
+    int& rb = b;
+    increase(rb);
+    cout << b << endl;
+
+
     return 0;
+}
+
+void increase(int& v)
+{
+    v++;
 }
