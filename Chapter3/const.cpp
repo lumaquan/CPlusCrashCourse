@@ -10,6 +10,12 @@ class MyObject
 {
 
 public:
+
+    MyObject()
+    {
+       state = INITIAL_STATE; 
+    }
+
     void useStateDoNotChageIt() const
     {
         int value = 2 * state;
@@ -27,27 +33,29 @@ public:
 
 private:
     int state;
+    const int INITIAL_STATE = 77;
 };
 
 int main()
 {
 
+
+    
+
     char name[] = "Luis Melendez";
     char word[] = {'a', 'b'};
     printChar(name);
-    printChar(word);
+    printChar(word);    
     MyObject obj;
     obj.useStateDoNotChageIt();
     obj.useState();
     obj.printState();
-
     const MyObject &myConst = obj;
     MyObject &my = obj;
     my.useState();
     obj.printState();
 
-    my = myConst;
-    obj.printState();
+
     
     return 0;
 }
