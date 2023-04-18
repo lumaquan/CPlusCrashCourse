@@ -9,7 +9,6 @@ int main()
 {
     printInt(23);
     printf("%f\n", sqrt(729));
-
     puts("");
     return 0;
 }
