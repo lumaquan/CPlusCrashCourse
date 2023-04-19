@@ -2,7 +2,6 @@
 #include <cmath>
 #include <cstdio>
 
-
 void printInt(int v);
 
 int main()
