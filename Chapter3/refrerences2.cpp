@@ -26,9 +26,6 @@ struct Element
     short op_num;
 };
 
-
-
-
 int main()
 {
     int a[] = {1, 2, 3, 4, 5};
@@ -56,9 +53,6 @@ int main()
 
     lower[7] = 'a';
 
-
-
-
     Element luis = {'S', 'r', 23};
     Element nadia = {'S', 'a', 34};
     Element jose = {'C', 's', 56};
@@ -74,21 +68,21 @@ int main()
     }
 
     int x = 10;
-    int& rx = x;
-    cout << "x = " << x << endl;
-    cout << "rx = " << rx << endl;
+    int &rx = x;
+    cout << "x == " << x << endl;
+    cout << "rx == " << rx << endl;
     rx = 34;
-    cout << "x = " << x << endl;
-    cout << "rx = " << rx << endl;
+    cout << "x == " << x << endl;
+    cout << "rx == " << rx << endl;
     int y = 20;
     rx = y;
-    cout << "x = " << x << endl;
-    cout << "rx = " << rx << endl;
+    cout << "x == " << x << endl;
+    cout << "rx == " << rx << endl;
 
     rx = 50;
-    cout << "x = " << x << endl;
-    cout << "rx = " << rx << endl;
-    cout << "y = " << y << endl;
+    cout << "x == " << x << endl;
+    cout << "rx == " << rx << endl;
+    cout << "y == " << y << endl;
 
     string name = "grande";
 

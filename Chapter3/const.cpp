@@ -10,10 +10,9 @@ class MyObject
 {
 
 public:
-
     MyObject()
     {
-       state = INITIAL_STATE; 
+        state = INITIAL_STATE;
     }
 
     void useStateDoNotChageIt() const
@@ -27,7 +26,8 @@ public:
         state++;
     }
 
-    void printState(){
+    void printState()
+    {
         printf("state = %d\n", state);
     }
 
@@ -39,13 +39,10 @@ private:
 int main()
 {
 
-
-    
-
     char name[] = "Luis Melendez";
     char word[] = {'a', 'b'};
     printChar(name);
-    printChar(word);    
+    printChar(word);
     MyObject obj;
     obj.useStateDoNotChageIt();
     obj.useState();
@@ -55,7 +52,5 @@ int main()
     my.useState();
     obj.printState();
 
-
-    
     return 0;
 }

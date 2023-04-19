@@ -27,7 +27,7 @@ private:
     int year;
 };
 
-void increase(int& v);
+void increase(int &v);
 
 int main()
 {
@@ -46,15 +46,14 @@ int main()
     int *parr = arr;
 
     int b = 100;
-    int& rb = b;
+    int &rb = b;
     increase(rb);
     cout << b << endl;
-
 
     return 0;
 }
 
-void increase(int& v)
+void increase(int &v)
 {
     v++;
 }
