@@ -18,7 +18,7 @@ int main()
 		std::cout << "C++98" << std::endl;
 	else
 		std::cout << "pre-standard C++." << __cplusplus << std::endl;
-	std::cout << "\n" << std::endl;
+
 
 return 0;
 }
