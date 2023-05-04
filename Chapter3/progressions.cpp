@@ -75,12 +75,12 @@ class FibonacciProgression : public Progression
 {
 
 public:
-    FibonacciProgression(int f = 1, int s = 1) : Progression(f), second{s}, previous{s-f} {}
+    FibonacciProgression(int f = 1, int s = 1) : Progression(f), second{s}, previous{s - f} {}
 
     virtual int firstValue()
     {
         current = first;
-        previous = second -first;
+        previous = second - first;
         return current;
     }
 
@@ -97,19 +97,15 @@ private:
     int previous;
 };
 
-
-
 void processAProgression(Progression p, int i)
 {
     p.printProgression(i);
 }
 
-
-void processAProgression(Progression* p, int i)
+void processAProgression(Progression *p, int i)
 {
     p->printProgression(i);
 }
-
 
 int main()
 {
@@ -126,9 +122,8 @@ int main()
     Progression *fibonacciProgression = new FibonacciProgression{1, 1};
     fibonacciProgression->printProgression(10);
     cout << endl;
-    // using a variable of type Progression or a reference to it does not call 
+    // using a variable of type Progression or a reference to it does not call
     // overriden method printProgression
-
 
     processAProgression(progression, 10);
     processAProgression(*arithmeticProgression, 10);
