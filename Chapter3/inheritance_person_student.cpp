@@ -70,7 +70,7 @@ public:
     {
         this->mayor = newMayor;
     }
-    
+
     virtual void print()
     {
         Person::print();
@@ -94,7 +94,6 @@ void processPeople(Person *a[], int len)
         a[i]->print();
     }
 }
-
 
 int main()
 {

@@ -27,7 +27,8 @@ int main()
 		std::cout << "C++98" << std::endl;
 	else
 		std::cout << "pre-standard C++." << __cplusplus << std::endl;
-	std::cout << "\n" << std::endl;
+	std::cout << "\n"
+			  << std::endl;
 
 	//	sizes of must important types in C++
 	printf("sizeof(short int) = %lu\n", sizeof(short int));
@@ -115,6 +116,8 @@ int main()
 	size_t val = sizeof(a);
 	printf("%ld\n", val);
 
+	size_t size_b = sizeof(bool);
+	printf("bool: %zd\n", size_b);
 	size_t size_c = sizeof(char);
 	printf("char: %zd\n", size_c);
 	size_t size_s = sizeof(short);

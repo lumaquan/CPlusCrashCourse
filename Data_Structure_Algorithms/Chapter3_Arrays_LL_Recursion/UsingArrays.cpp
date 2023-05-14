@@ -5,16 +5,13 @@
 
 using namespace std;
 
-
-
-
 class GameEntry
 {
 public:
     GameEntry(const string &n = "", int s = 0);
     string getName() const;
     int getScore() const;
-    bool operator==(const GameEntry& x) const;
+    bool operator==(const GameEntry &x) const;
 
 private:
     string name;
@@ -28,13 +25,11 @@ bool GameEntry::operator==(const GameEntry &x) const
 {
     return x.getName() == name && x.getScore() == score;
 }
-ostream& operator<<(ostream& out, GameEntry& e){
+ostream &operator<<(ostream &out, GameEntry &e)
+{
     out << "( " << e.getName() << "," << e.getScore() << ")";
-    return out; 
+    return out;
 }
-
-
-
 
 class Scores
 {
@@ -104,10 +99,6 @@ void Scores::print()
         cout << entries[i].getName() << ", " << entries[i].getScore() << endl;
     }
 }
-
-
-
-
 
 int main()
 {
