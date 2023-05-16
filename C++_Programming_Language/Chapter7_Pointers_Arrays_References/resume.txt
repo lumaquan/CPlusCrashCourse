@@ -1,0 +1,15 @@
+
+
+
+void* pointer to something of unknown type
+
+*p++ == *(p++)
+*++p = *(++p)
+
+it is possible to create arrays this way:
+- T t[]{T{...}, T{...}, T{...}};
+- T t = {T{...}, T{...}, T{...}};
+
+"string" is type const char[7];
+
+
