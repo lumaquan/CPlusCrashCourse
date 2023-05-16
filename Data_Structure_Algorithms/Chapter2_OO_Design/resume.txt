@@ -1,0 +1,31 @@
+
+
+A CLASS is an specification of data members and memeber functions.
+An OBJECT "comes" from a class
+
+CORRECTNESS: the right output to all expected inputs in a program
+ROBUSTNESS: handle unexpected inputs 
+ADAPTABILITY: software must be able to evolve over time
+REUSABILITY: software must be able to be reused in different systems/subsystems
+
+ADT: is mathematical model of a data structure that specifies the type of data stored, 
+     operations suppoted, and the type of parameters of these operations. Expresses
+     the WHAT can be donde and not the HOW it's done.
+
+CLASS is the realization of an ADT. It also specifies HOW the operations are performed, 
+       though the public interface should not provide any hint about it.
+
+ENCAPSULATION: components should not reveal HOW they implement their inner workings. The 
+    contract is to maintain the public interface.
+
+MODULARITY: different parts of a system are organized as a functional units.
+
+INHERITANCE: design of general classes that can be specialized to particular classes.
+
+
+
+
+
+
+
+
