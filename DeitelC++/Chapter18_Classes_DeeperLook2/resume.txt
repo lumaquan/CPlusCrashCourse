@@ -1,0 +1,6 @@
+
+
+
+A const data member MUST be initialized with a member initializer syntax
+
+A reference data member MUST be initialized with a member initializer syntax
