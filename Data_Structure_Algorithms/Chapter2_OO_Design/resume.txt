@@ -26,6 +26,43 @@ INHERITANCE: design of general classes that can be specialized to particular cla
 
 
 
+    Progression *arithmeticProgression = new ArithmeticProgression(5);
+    arithmeticProgression->printProgression(10);
+    Progression *arithmeticProgression2 = new ArithmeticProgression{};
+    arithmeticProgression2->printProgression(10);
+    Progression *geometricProgression = new GeometricProgression{};
+    geometricProgression->printProgression(10);
+    Progression *geometricProgression2 = new GeometricProgression{5, 10};
+    geometricProgression2->printProgression(10);
+    Progression *fibonacciProgression = new FibonacciProgression{1, 1};
+    fibonacciProgression->printProgression(10);
+    cout << endl;
+    // using a variable of type Progression or a reference to it does not call
+    // overriden method printProgression
+
+    processAProgression(progression, 10);
+    processAProgression(*arithmeticProgression, 10);
+    processAProgression(*arithmeticProgression2, 10);
+    processAProgression(*geometricProgression, 10);
+    processAProgression(*geometricProgression2, 10);
+    processAProgression(*fibonacciProgression, 10);
+    cout << endl;
+
+    // using a variable of type Progression* does call overriden method printProgression
+    processAProgression(&progression, 10);
+    processAProgression(arithmeticProgression, 10);
+    processAProgression(arithmeticProgression2, 10);
+    processAProgression(geometricProgression, 10);
+    processAProgression(geometricProgression2, 10);
+    processAProgression(fibonacciProgression, 40);
+    cout << endl;
+
+    delete arithmeticProgression;
+    delete arithmeticProgression2;
+    delete geometricProgression;
+    delete geometricProgression2;
+    delete fibonacciProgression;
+
 
 
 
