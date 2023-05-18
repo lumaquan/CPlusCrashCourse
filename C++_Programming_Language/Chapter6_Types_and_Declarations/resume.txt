@@ -1,0 +1,16 @@
+6.3 Declarations
+
+A definition is a declaration that supplies all that is needed in a program 
+for the use of an entity. Not necessarily set memory aside.
+
+
+STRUCTURE OF A DECLARATION:
+- Optional specifiers: STATIC, VIRTUAL, EXTERN, CONSTEXPR
+- Base type: CONST T, vector<T>,
+- A declarator: NAME, *NAME, &NAME
+- Optional suffix function specifiers: const, noexcept
+- Optional initializer
+
+declarator operators: *, *const, *volatile, &, &&, auto, [], (), ->
+
+
