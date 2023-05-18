@@ -9,6 +9,13 @@ Person::Person()
     constMsg();
 }
 
+Person::Person(const Person &person)
+{
+    id = person.id;
+    name = person.name;
+    constMsg();
+}
+
 Person::Person(string name, string id) : name(name), id(id)
 {
     constMsg();
@@ -21,7 +28,7 @@ Person::~Person()
 
 void Person::print() const
 {
-    cout << "PRINT: name = " << name << ", id = " << id << endl;
+    cout << "PRINT PERSON: name = " << name << ", id = " << id << endl;
 }
 
 string Person::getName() const

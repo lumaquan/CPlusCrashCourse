@@ -1,6 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 #include "Person.h"
+#include "Date.h"
 
 class Student : public Person
 {
@@ -18,6 +19,7 @@ public:
 private:
     std::string mayor;
     int gradYear;
+    Date date;
     void constMsg()
     {
         std::cout << "mayor = " << mayor << ", year = " << gradYear << " Student CONSTRUCTOR runs " << std::endl;

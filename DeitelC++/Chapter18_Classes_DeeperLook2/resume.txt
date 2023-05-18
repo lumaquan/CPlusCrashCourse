@@ -1,6 +1,10 @@
 
-
-
 A const data member MUST be initialized with a member initializer syntax
 
 A reference data member MUST be initialized with a member initializer syntax
+
+MEMBER INITIALIZING LIST: 
+ ClassName(param1, param2...): data_member1{param1}, data_member2{param2},... { //body }
+
+const T* p   implies that p-> can only access public const members of T. Of course p
+             can point to const or nonconst T objects.

@@ -1,0 +1,8 @@
+
+
+FRIENDS:
+
+- function friends ARE NOT member functions
+- they are given special privileges to acces private and protected members
+- they DO NOT belog to class namespace declaring them as friends
+- they MUST BE external to any class scope or members of a particular class 

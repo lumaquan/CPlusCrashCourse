@@ -32,6 +32,5 @@ void Student::changeMayor(const string &newMayor)
 
 void Student::print() const
 {
-    Person::print();
-    cout << "PRINT: mayor = " << mayor << ", year = " << gradYear << endl;
+    cout << "PRINT STUDENT: id = " << id << ", name  = " << name << ", mayor = " << mayor << ", year = " << gradYear << endl;
 }

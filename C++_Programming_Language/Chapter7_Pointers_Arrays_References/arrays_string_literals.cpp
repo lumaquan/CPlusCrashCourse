@@ -8,11 +8,17 @@ class Cosa
 public:
     Cosa(int x = 0) : id{x}
     {
+        cout << "Cosa constructor, id = " << id << endl;
     }
 
     int getId() const
     {
         return id;
+    }
+
+    void setId(int nId)
+    {
+        id = nId;
     }
 
     friend ostream &operator<<(ostream &o, const Cosa &a)
@@ -32,6 +38,8 @@ void printIntArray(const int *a, int size);
 void printCharArray(const char *a, int size);
 void printDoubleArray(const double *a, int size);
 void printCosaArray(const Cosa *a, int size);
+template <typename T>
+void printArray(const T *t, int size);
 
 int main()
 {
@@ -64,11 +72,39 @@ int main()
 
     cout << sizeof("Lion") << endl;
 
-    const char *pp = "Ganimedes";  // in g++-12 only one string literal is static allocated
+    const char *pp = "Ganimedes"; // in g++-12 only one string literal is static allocated
     const char *qq = "Ganimedes";
     cout << ((pp == qq) ? "same" : "different") << endl;
 
-    cout<<"beep at end of message\a\n";
+    // Little test of const T* objects
+    Cosa c1{10};
+    Cosa c2{20};
+    const Cosa c3{30};
+    const Cosa *pC = &c1;
+    cout << pC->getId() << endl;
+    pC = &c2;
+    cout << pC->getId() << endl;
+    pC = &c3;
+    cout << pC->getId() << endl;
+
+    Cosa *const ppC = &c1;
+    // ppC = &c2; Cannot be assigned to any thing different
+
+    // Default copy constructor ARE memberwise constructors
+    Cosa cosi1{10};
+    Cosa cosi2 = cosi1; // No constructor is called
+    Cosa cosi3{cosi1};  // No constructor is called
+    cosi2.setId(22);
+    cosi3.setId(33);
+    Cosa CosaArr[] = {cosi1, cosi2, cosi3};
+    printCosaArray(CosaArr, 3);
+
+    // Testing template function
+    cout << "TESTING FUNCTION TEMPLATE TO PRINT ARRAYS:" << endl;
+    printArray(darr, 5);
+    printArray(iarr, 4);
+    printArray(carr, 12);
+    printArray(CosaArr, 3);
 }
 
 // function definitions
@@ -160,4 +196,21 @@ void printCosaArray(const Cosa *a, int size)
         cout << a[i] << ", ";
     }
     cout << a[i] << "]" << endl;
+}
+
+template <typename T>
+void printArray(const T *t, int size)
+{
+    cout << "[";
+    if (size == 0)
+    {
+        cout << "]" << endl;
+        return;
+    }
+    int i = 0;
+    for (; i < size - 1; i++)
+    {
+        cout << t[i] << ", ";
+    }
+    cout << t[i] << "]" << endl;
 }

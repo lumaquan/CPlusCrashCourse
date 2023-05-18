@@ -15,49 +15,50 @@ int main()
 {
     cout << "MAIN STARTS" << endl;
 
-    cout << "LETS DO SOMETHING WITH PERSONS: " << endl;
-
+    cout << "CREATE PERSONS" << endl;
     Person person1;
     Person person2{"Luis", "123456"};
+    cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS PERSONS: " << endl;
     processPerson(person1);
     processPerson(person2);
     cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS PERSONS BY REFERENCE: " << endl;
     processPersonByRef(person1);
     processPersonByRef(person2);
     cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS PERSONS BY POINTER: " << endl;
     processPersonByPointer(&person1);
     processPersonByPointer(&person2);
     cout << endl;
-
-    cout << "LETS DO SOMETHING WITH STUDENTS: " << endl;
     cout << endl;
 
+    cout << "CREATE STUDENTS" << endl;
     Student student1;
     Student student2{"Physics"};
     Student student3{"Nadia", "010101", "Mathematics", 2007};
+    cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS STUDENTS: " << endl;
     processPerson(student1);
     processPerson(student2);
     processPerson(student3);
     cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS STUDENTS BY REFERENCE: " << endl;
     processPersonByRef(student1);
     processPersonByRef(student2);
     processPersonByRef(student3);
     cout << endl;
+    cout << endl;
 
-    cout << "LETS PROCESS STUDENTS BY POINTER: " << endl;
     processPersonByPointer(&student1);
     processPersonByPointer(&student2);
     processPersonByPointer(&student3);
+    cout << endl;
     cout << endl;
 
     cout << "MAIN ENDS" << endl;
@@ -74,15 +75,18 @@ void processPeople(Person *people[], int n)
 
 void processPerson(Person person)
 {
+    cout << "processPerson(Person)" << endl;
     person.print();
 }
 
 void processPersonByRef(const Person &person)
 {
+    cout << "processPersonByRef(Person&)" << endl;
     person.print();
 }
 
 void processPersonByPointer(Person *person)
 {
+    cout << "processPersonByPointer(Person*)" << endl;
     person->print();
 }

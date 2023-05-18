@@ -10,14 +10,13 @@ class Person
 
 public:
     Person();
+    Person(const Person &person);
     Person(std::string name, std::string id);
     virtual ~Person();
     virtual void print() const;
     std::string getName() const;
 
 private:
-    std::string name;
-    std::string id;
     void constMsg()
     {
         std::cout << "id = " << id << ", name = " << name << " Person CONSTRUCTOR runs " << std::endl;
@@ -26,6 +25,10 @@ private:
     {
         std::cout << "id = " << id << ", name = " << name << " Person DESTRUCTOR runs " << std::endl;
     }
+
+protected:
+    std::string name;
+    std::string id;
 };
 
 #endif
