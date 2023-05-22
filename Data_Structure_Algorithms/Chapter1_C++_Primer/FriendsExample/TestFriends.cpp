@@ -2,6 +2,11 @@
 #include "Vector.h"
 using namespace std;
 
+void doImplicit(Vector v)
+{
+    cout << v << endl;
+}
+
 int main()
 {
     Vector v1{1, 2, 3};
@@ -17,4 +22,9 @@ int main()
     // Using an global function friend to Vector class to change vector.
     Zeroth(v1);
     cout << v1 << endl;
+
+    // Implicit conversion to Vector. Bad practive. Obscure
+    Vector implicit = {1};
+    cout << implicit << endl;
+    doImplicit(10);
 }

@@ -20,5 +20,6 @@ int main()
     cout << noon.getHour() << endl;
     cout << noon.getMinute() << endl;
 
+
     return 0;
 }

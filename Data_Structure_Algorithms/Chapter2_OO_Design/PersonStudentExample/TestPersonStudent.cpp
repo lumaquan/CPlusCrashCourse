@@ -10,6 +10,7 @@ void processPeople(Person *people[], int n);
 void processPerson(Person person);
 void processPersonByRef(const Person &person);
 void processPersonByPointer(Person *pointerToPerson);
+void showMayorForPersons(Person *p[], int n);
 
 int main()
 {
@@ -61,6 +62,16 @@ int main()
     cout << endl;
     cout << endl;
 
+    Person *people[5];
+    people[0] = &person1;
+    people[1] = &person1;
+    people[2] = &student1;
+    people[3] = &student2;
+    people[4] = &student3;
+    showMayorForPersons(people, 5); // testing dynamic casting
+    cout << endl;
+    cout << endl;
+    
     cout << "MAIN ENDS" << endl;
     return 0;
 }
@@ -89,4 +100,22 @@ void processPersonByPointer(Person *person)
 {
     cout << "processPersonByPointer(Person*)" << endl;
     person->print();
+}
+
+void showMayorForPersons(Person *p[], int n)
+{
+    cout << "dynamic casting " << endl;
+    for (size_t i = 0; i < n; i++)
+    {
+        Student *sp = dynamic_cast<Student *>(p[i]);
+        if (sp != NULL)
+        {
+            sp->changeMayor("paleontology");
+            sp->print();
+        }
+        else
+        {
+            cout << "Could not cast " << i << "th element" << endl;
+        }
+    }
 }
