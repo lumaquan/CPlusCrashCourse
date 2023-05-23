@@ -20,11 +20,12 @@ int *Util::array_of_ints(int n, order order)
 void Util::printArray(int *a, int n)
 {
     cout << "[";
-    if (n = 0){
+    if (n = 0)
+    {
         cout << " ]" << endl;
-    return;
+        return;
     }
-    
+
     for (int i = 0; i < n - 1; i++)
     {
         cout << a[i] << ", ";

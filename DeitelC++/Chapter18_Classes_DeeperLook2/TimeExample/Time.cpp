@@ -10,14 +10,14 @@ Time::Time(int hour, int minute, int second)
     setTime(hour, minute, second);
 }
 
-void Time::setTime(int h, int m, int s)
+Time &Time::setTime(int h, int m, int s)
 {
-    setHour(h);
-    setMinute(m);
-    setSecond(s);
+    setHour(h).setMinute(m).setSecond(s);
+    cout << this << endl;
+    return *this;
 }
 
-void Time::setHour(int h)
+Time &Time::setHour(int h)
 {
     if (h >= 0 && h < 24)
     {
@@ -27,9 +27,11 @@ void Time::setHour(int h)
     {
         throw invalid_argument("hour must be 0-23");
     }
+    cout << this << endl;
+    return *this;
 }
 
-void Time::setMinute(int m)
+Time &Time::setMinute(int m)
 {
     if (m >= 0 && m < 60)
     {
@@ -39,9 +41,11 @@ void Time::setMinute(int m)
     {
         throw invalid_argument("minute must be 0-59");
     }
+    cout << this << endl;
+    return *this;
 }
 
-void Time::setSecond(int s)
+Time &Time::setSecond(int s)
 {
     if (s >= 0 && s < 60)
     {
@@ -51,6 +55,8 @@ void Time::setSecond(int s)
     {
         throw invalid_argument("second must be 0-59");
     }
+    cout << this << endl;
+    return *this;
 }
 
 int Time::getHour() const
@@ -73,9 +79,14 @@ void Time::printUniversal() const
     cout << setfill('0') << setw(2) << getHour() << ":" << setw(2) << getMinute() << ":" << setw(2) << getSecond() << endl;
 }
 
-void Time::printStandard() 
+void Time::printStandard() const
 {
     cout << (getHour() == 0 || getHour() == 12 ? 12 : getHour() % 12) << ":"
          << setfill('0') << setw(2) << getMinute() << ":"
          << setw(2) << getSecond() << (getHour() < 12 ? " AM" : " PM") << endl;
+}
+
+const Time &Time::test()  const
+{
+    return *this;
 }
