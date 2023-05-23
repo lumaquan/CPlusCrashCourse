@@ -10,5 +10,4 @@ int main()
     cout << pn << endl;
     //cin >> pn;
     cout << pn << endl;
-    pn << cout;
 }
