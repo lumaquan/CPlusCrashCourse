@@ -3,14 +3,13 @@
 
 using namespace std;
 
-
 ostream &operator<<(ostream &out, const PhoneNumber &pn)
 {
-    out << "("<< pn.areaCode << ") " << pn.exchange <<"-"<< pn.line;
+    out << "(" << pn.areaCode << ") " << pn.exchange << "-" << pn.line;
     return out;
 }
 
-istream &operator>>(istream & in, PhoneNumber & pn)
+istream &operator>>(istream &in, PhoneNumber &pn)
 {
     in.ignore();
     in >> setw(3) >> pn.areaCode;
@@ -20,4 +19,3 @@ istream &operator>>(istream & in, PhoneNumber & pn)
     in >> setw(4) >> pn.line;
     return in;
 }
-
