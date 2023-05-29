@@ -1,0 +1,6 @@
+
+allocate ~ reserve
+deallocate ~release 
+
+free store = heap
+

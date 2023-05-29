@@ -28,6 +28,34 @@ int main()
     date1++;
     cout << date1 << endl;
 
-    Date d =  {1,2,2000}; // I do not remember how to solve this issue
+    Date d = {1, 2, 2000}; // I do not remember how to solve this issue
     cout << d << endl;
+
+    Date *dd = new Date[10];
+    for (int i = 0; i < 10; i++)
+    {
+        cout << dd[i] << endl;
+    }
+    /*
+        Date ddd[] = new Date[15]; // this is not allwed
+        for (int  i = 0; i < 15; i++)
+        {
+            cout <<  dd[i]  << endl;
+        }
+    */
+
+    Date *pd = new Date(5, 22, 2023);
+    pd = &d;
+
+    int ai[] = {1, 2, 3, 4};
+    ai[0] = 10; // a. has type    int * const
+    cout << ai[0] << endl;
+
+    /*
+        ai = new int[10];   // is not allowed because ai es *const
+     */
+
+    delete[] dd;
+    delete pd;
+    
 }
