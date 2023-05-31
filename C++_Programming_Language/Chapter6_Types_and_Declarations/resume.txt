@@ -13,4 +13,31 @@ STRUCTURE OF A DECLARATION:
 
 declarator operators: *, *const, *volatile, &, &&, auto, [], (), ->
 
+6.3.4 Scope ----------------------
+
+local name: from declaration to block termination
+parameters are local 
+
+member name: outside all functions in a class and its scope is
+in the entire body of the class {}.
+
+namespace name: inside the definition of namespace but outside
+all functions, lambdas, classes, enums, other namespaces.
+
+global name: outside of any construct 
+
+statement name: defined in for, while, if; since () and their
+scope ends with the } delimiting the construct body.
+
+fuction scope: from declaration until the end of the function.
+
+each name belogs to a scope: local scope, member scope, namespace
+scope ... global scope.
+
+
+6.3.5 Initialization -----------------
+
+
+
+
 
