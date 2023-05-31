@@ -5,6 +5,9 @@
 
 class SinglyLinkedList
 {
+
+    friend std::ostream &operator<<(std::ostream &out, const SinglyLinkedList &sll);
+
 public:
     SinglyLinkedList();
     ~SinglyLinkedList();
@@ -15,6 +18,7 @@ public:
 
 private:
     StringNode *head;
+    void print() const;
 };
 
 #endif
