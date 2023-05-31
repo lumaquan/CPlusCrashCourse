@@ -37,7 +37,15 @@ scope ... global scope.
 
 6.3.5 Initialization -----------------
 
+float f = 3.1416;
+int i{f}   allowed in ggc12 but not in clang++
 
+if v is type X then 
+    X a1 {v};
+    X a2 = {v};
+    X a3 = v;
+    X a4(v);   
+then are all using COPY CONSTRUCTOR.
 
 
 
