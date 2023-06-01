@@ -18,4 +18,13 @@ BaseClass* pb = new BaseClass
  (DerivedClass * )pb   is a valid pointer to object of derive, but the methods
         and available in derived class will used data members not initialized.
         
-         
+20.2.1 Member functions ..........
+
+Nothing to add. 
+
+
+20.2.2 Constructors and Destructors ......
+
+Base constructor -> Data constructors -> Derived constructor
+
+We build from the roots (base classes) toward the leaves (derived classes).

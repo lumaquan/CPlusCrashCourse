@@ -4,11 +4,20 @@
 using namespace std;
 
 CommissionEmployee::CommissionEmployee(const string &first, const string &last,
-                                       const string &ssn, double sales, double rate):
-                                       firstName{first}, lastName{last}, socialSecurityNumber{ssn}
+                                       const string &ssn, double sales, double rate) : firstName{first}, lastName{last}, socialSecurityNumber{ssn}
 {
+    cout << "CommissionEmployee"
+         << "< " << this << ">"
+         << " CONSTRUCTOR" << endl;
     setGrossSales(sales);
     setCommissionRate(rate);
+}
+
+CommissionEmployee::~CommissionEmployee()
+{
+    cout << "CommissionEmployee"
+         << "< " << this << ">"
+         << " DESTRUCTOR" << endl;
 }
 
 void CommissionEmployee::setFirstName(const string &first)

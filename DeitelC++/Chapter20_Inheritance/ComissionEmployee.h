@@ -1,6 +1,7 @@
 #ifndef COMMISSION_H
 #define COMMISSION_H
 #include <string>
+#include "Point.h"
 using namespace std;
 
 class CommissionEmployee
@@ -8,6 +9,7 @@ class CommissionEmployee
 public:
     CommissionEmployee(const string &, const string &, const string &,
                        double = 0.0, double = 0.0);
+    ~CommissionEmployee();
 
     void setFirstName(const string &);
     void setLastName(const string &);
@@ -29,6 +31,7 @@ protected:
     string socialSecurityNumber;
     double grossSales;
     double commissionRate;
+    Point p;
 };
 
 #endif
