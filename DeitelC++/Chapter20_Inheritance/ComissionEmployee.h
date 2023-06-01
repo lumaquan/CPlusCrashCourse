@@ -12,7 +12,7 @@ public:
     void setFirstName(const string &);
     void setLastName(const string &);
     void setSocialSecurityNumber(const string &);
-    void setGrossSales(double); // set gross sales amount
+    void setGrossSales(double);
     void setCommissionRate(double);
 
     string getFirstName() const;
@@ -23,7 +23,7 @@ public:
     double earnings() const;
     void print() const;
 
-private:
+protected:
     string firstName;
     string lastName;
     string socialSecurityNumber;

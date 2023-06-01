@@ -6,10 +6,12 @@ using namespace std;
 
 class BasePlusCommissionEmployee
 {
+    BasePlusCommissionEmployee(const string &, const string &,
+                               const string &, double = 0.0, double = 0.0, double = 0.0);
     void setFirstName(const string &);
     void setLastName(const string &);
     void setSocialSecurityNumber(const string &);
-    void setGrossSales(double); 
+    void setGrossSales(double);
     void setCommissionRate(double);
     void setBaseSalary(double);
 

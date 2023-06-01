@@ -1,0 +1,21 @@
+
+20.1 Introduction ------------------
+
+Derived classes and their mechanism help express commonaity and hierarchical
+relationships.
+
+Implementation inheritance: inherit facilities from base class to derived class.
+
+Interface inheritance: use several different derived classes interchangeably thru 
+the common interface of base class.
+
+Interface inheritane = dynamic polymorphism or runtime polymorphism.
+Templates = static polymorphims
+
+20.2 Derived Classes ----------------
+
+BaseClass* pb = new BaseClass
+ (DerivedClass * )pb   is a valid pointer to object of derive, but the methods
+        and available in derived class will used data members not initialized.
+        
+         

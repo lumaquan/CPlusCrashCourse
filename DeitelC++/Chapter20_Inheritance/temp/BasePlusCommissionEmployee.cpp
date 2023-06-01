@@ -1,10 +1,10 @@
 #include "BasePlusCommissionEmployee.h"
 #include <iostream>
 
-usging namespace std;
+using namespace std;
 
 BasePlusCommissionEmployee::BasePlusCommissionEmployee(const string &first, const string &last,
-                                                       const string &ssn, double sales, double rate, double salay)
+                                                       const string &ssn, double sales, double rate, double salary)
 {
     firstName = first;
     lastName = last;
@@ -94,6 +94,6 @@ void BasePlusCommissionEmployee::print() const
     cout << "base-salaried commission employee: " << firstName << ' ' << lastName
          << "\nsocial security number: " << socialSecurityNumber
          << "\ngross sales: " << grossSales
-         << "\ncommission rate: " << commissionRate;
-    << "\nbase salary: " << baseSalary;
+         << "\ncommission rate: " << commissionRate
+         << "\nbase salary: " << baseSalary;
 }
