@@ -9,7 +9,7 @@ class CommissionEmployee
 public:
     CommissionEmployee(const string &, const string &, const string &,
                        double = 0.0, double = 0.0);
-    ~CommissionEmployee();
+    virtual ~CommissionEmployee();
 
     void setFirstName(const string &);
     void setLastName(const string &);
@@ -22,8 +22,8 @@ public:
     string getSocialSecurityNumber() const;
     double getCommissionRate() const;
     double getGrossSales() const;
-    double earnings() const;
-    void print() const;
+    virtual double earnings() const;
+    virtual void print() const;
 
 protected:
     string firstName;

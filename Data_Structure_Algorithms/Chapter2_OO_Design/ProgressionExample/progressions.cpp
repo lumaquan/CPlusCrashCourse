@@ -9,12 +9,14 @@ using namespace std;
 
 int main()
 {
+    cout << "Progression: " << endl;
     Progression progression1;
     progression1.printProgression(10);
     Progression progression2{7};
     progression2.printProgression(10);
     cout << endl;
 
+    cout << "ArithmeticProgression: " << endl;
     ArithmeticProgression arithmeticProgression1;
     arithmeticProgression1.printProgression(10);
     ArithmeticProgression arithmeticProgression2{118};
@@ -23,6 +25,7 @@ int main()
     arithmeticProgression3.printProgression(10);
     cout << endl;
 
+    cout << "GeometricProgression: " << endl;
     GeometricProgression geometric_progression1{};
     geometric_progression1.printProgression(10);
     GeometricProgression geometric_progression2{5};
@@ -31,6 +34,7 @@ int main()
     geometric_progression3.printProgression(10);
     cout << endl;
 
+    cout << "FibonacciProgression: " << endl;
     FibonacciProgression fibonacci_progression1;
     fibonacci_progression1.printProgression(10);
     FibonacciProgression fibonacci_progression2{3};
@@ -39,6 +43,7 @@ int main()
     fibonacci_progression3.printProgression(10);
     cout << endl;
 
+    cout << "All progression using Progression*[]: " << endl;
     Progression *p[11];
     p[0] = &progression1;
     p[1] = &progression2;

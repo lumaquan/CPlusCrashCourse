@@ -28,3 +28,15 @@ Nothing to add.
 Base constructor -> Data constructors -> Derived constructor
 
 We build from the roots (base classes) toward the leaves (derived classes).
+
+
+20.3.1 Type Fields ............
+
+if Base* bp = new Derived()
+bp->fun_virt()   calls the redefinition in derived if any
+bp->fun_no_virt() calls version in base 
+
+if Derived* dp = (Dervived*)new Base()
+dp->fun_virt() calls version in base
+dp->fun_no_virt() calls version in derived ( even if their fields are properly init)
+
