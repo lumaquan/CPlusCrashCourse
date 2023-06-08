@@ -13,3 +13,21 @@ it is possible to create arrays this way:
 "string" is type const char[7];
 
 
+7.1 Introduction ----------------------------
+
+An object can be accessed if its address and type is known
+
+references also hold addresses ? 
+
+7.2 Pointers --------------------------
+T* is a type that holds the address of an object of type T.
+
+*T can be a left-value and a right-value
+
+if  p isType T* then:
+p++,++p, p+intVal, p+=intVal, p-=intVal   are allowed
+
+if p isType void* then:
+can hold ANY address even its own
+can not be dereferenced 
+can not do arithmetic on it
