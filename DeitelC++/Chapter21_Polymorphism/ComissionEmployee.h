@@ -1,37 +1,37 @@
-#ifndef COMMISSION_H
-#define COMMISSION_H
+#ifndef COMMISSION_EMPLOYEE_H
+#define COMMISSION_EMPLOYEE_H
 #include <string>
 #include "Point.h"
-using namespace std;
+
 
 class CommissionEmployee
 {
 public:
-    CommissionEmployee(const string &, const string &, const string &,
+    CommissionEmployee(const std::string &, const std::string &, const std::string &,
                        double = 0.0, double = 0.0);
     virtual ~CommissionEmployee();
 
-    void setFirstName(const string &);
-    void setLastName(const string &);
-    void setSocialSecurityNumber(const string &);
+    void setFirstName(const std::string &);
+    void setLastName(const std::string &);
+    void setSocialSecurityNumber(const std::string &);
     void setGrossSales(double);
     void setCommissionRate(double);
 
-    string getFirstName() const;
-    string getLastName() const;
-    string getSocialSecurityNumber() const;
+    std::string getFirstName() const;
+    std::string getLastName() const;
+    std::string getSocialSecurityNumber() const;
     double getCommissionRate() const;
     double getGrossSales() const;
-    double earnings() const;
-    void print() const;
+    virtual double earnings() const;
+    virtual void print() const;
 
 private:
-    string firstName;
-    string lastName;
-    string socialSecurityNumber;
+    std::string firstName;
+    std::string lastName;
+    std::string socialSecurityNumber;
     double grossSales;
     double commissionRate;
-    //Point p;
+    Point p;
 };
 
 #endif

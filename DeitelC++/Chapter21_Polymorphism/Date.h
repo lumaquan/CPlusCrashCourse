@@ -6,16 +6,17 @@ class Date
 {
 public:
     Date(int m = 1, int d = 1, int year = 2000)
-    {
+    {/* 
         cout << "Date"
              << "< " << this << ">"
              << " CONSTRUCTOR" << endl;
-    }
+     */}
     ~Date()
-    {
-        cout << "Date"
-             << "< " << this << ">"
-             << " DESTRUCTOR" << endl;
+    { /*
+         cout << "Date"
+              << "< " << this << ">"
+              << " DESTRUCTOR" << endl;
+      */
     }
 
 private:
