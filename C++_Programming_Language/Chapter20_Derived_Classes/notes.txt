@@ -1,8 +1,16 @@
 
 20.1 Introduction ------------------
 
-Derived classes and their mechanism help express commonaity and hierarchical
-relationships.
+Classes represente concepts but also help to express commonality among
+objects of a type and hierarchical relationships among related concepts.
+
+An abstract class is a unifying concept, it expresses commonality among
+the classes that derive from it. A parent class is to its derive Classes
+as the class is to its objects.
+
+Languages supports generalization thru base classes and specialization thru
+derived classes. Inheritance is the connection between this realm of modeling
+-design.
 
 Implementation inheritance: inherit facilities from base class to derived class.
 
@@ -10,7 +18,9 @@ Interface inheritance: use several different derived classes interchangeably thr
 the common interface of base class.
 
 Interface inheritane = dynamic polymorphism or runtime polymorphism.
+
 Templates = static polymorphims
+
 
 20.2 Derived Classes ----------------
 
