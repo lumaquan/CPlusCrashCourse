@@ -8,6 +8,16 @@ template <typename E>
 class Stack
 {
 public:
+    Stack()
+    {
+        std::cout << "Stack<" << this << "> CONSTRUCTOR" << std::endl;
+    }
+
+    virtual ~Stack()
+    {
+        std::cout << "Stack<" << this << "> DESTRUCTOR" << std::endl;
+    }
+
     virtual void push(const E &e) throw(StackFull) = 0;
     virtual void pop() throw(StackEmpty) = 0;
     virtual const E &top() throw(StackEmpty) = 0;

@@ -1,0 +1,15 @@
+
+
+A template class defines an interface
+A base class defines an interface
+
+
+polymorhin design 
+ - virtual functions offer dynamic polymorphism
+ - template class offer compile-time polymorphism or parametric polymorphism
+
+
+
+ 27.2 Parametrization and Hierarchy -----------------
+
+ 

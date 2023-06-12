@@ -1,0 +1,9 @@
+23.2 A Simple String Template   -----------
+
+A template is a specification of how to generate something given suitable template arguments.
+
+for Stroustrup: 
+ - class template = template class
+ - function template = template function
+
+
