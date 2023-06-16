@@ -4,7 +4,7 @@ template <typename E>
 class StackOneElement :public Stack<E>
 {
 public:
-    void push(const E &e) throw(StackFull)
+    void push(const E &e) noexcept(false)
     {
         if (!empty())
         {
@@ -17,7 +17,7 @@ public:
         }
     }
 
-    void pop() throw(StackEmpty)
+    void pop() noexcept(false)
     {
         if (!empty())
         {
@@ -27,7 +27,7 @@ public:
             throw StackEmpty("empty stack");
     }
 
-    const E &top() throw(StackEmpty)
+    const E &top() noexcept(false)
     {
         if (!empty())
             {

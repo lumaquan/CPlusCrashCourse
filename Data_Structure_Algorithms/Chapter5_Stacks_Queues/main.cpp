@@ -3,6 +3,7 @@
 #include "StackOneElement.h"
 #include "StackArrayFix.h"
 #include "StackLinkedList.h"
+#include <stack>
 
 using namespace std;
 
@@ -18,41 +19,51 @@ void testStack(Stack<double> *stackPtr, int size)
     }
 
     int i = 0;
-    while (i < size)
+    while (i < size) // pushes max(size, stack capacity)
     {
-        stackPtr->push(3.1451 + i);
+        try
+        {
+            stackPtr->push(3.1451 + i);
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << e.what() << '\n';
+        }
         i++;
     }
 
-    cout << "size = "<< stackPtr->size() << endl;
+    cout << "size = " << stackPtr->size() << endl;
 
-    while (i > size / 2)
+    while (i > 0) // pops max(size, stack capacity)
     {
-        cout << stackPtr->top() << endl;
-        stackPtr->pop();
+        try
+        {
+            cout << stackPtr->top() << endl;
+            stackPtr->pop();
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << e.what() << '\n';
+        }
         i--;
     }
 
-    cout << "size = "<< stackPtr->size() << endl;
-
-    try
-    {
-        stackPtr->pop();
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    cout << "size = " << stackPtr->size() << endl;
 }
 
 int main()
 {
     Stack<double> *stackPtrArr[2];
-    stackPtrArr[0] = new StackArrayFix<double>(10);
+    stackPtrArr[0] = new StackArrayFix<double>(8);
     stackPtrArr[1] = new StackLinkedList<double>();
+
+    cout << "TEST STACK ARRAY: " << endl;
     testStack(stackPtrArr[0], 10);
-    testStack(stackPtrArr[1], 20);
+
+    cout << "TEST STACK LINKED LIST: " << endl;
+    testStack(stackPtrArr[1], 10);
 
     delete stackPtrArr[0];
     delete stackPtrArr[1];
+    cout << " MAIN ENDS " << endl;
 }

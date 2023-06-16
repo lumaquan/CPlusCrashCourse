@@ -15,7 +15,7 @@ public:
 
     ~SLinkedList()
     {
-        std::cout << "SLinkedList<" <<  this <<  "> DESTRUCTOR" << std::endl;
+        std::cout << "SLinkedList<" << this << "> DESTRUCTOR" << std::endl;
         while (!empty())
         {
             removeFront();

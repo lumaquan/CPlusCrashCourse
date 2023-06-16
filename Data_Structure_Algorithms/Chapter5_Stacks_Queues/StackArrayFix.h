@@ -9,6 +9,7 @@ public:
     {
         std::cout << "StackArrayFix<" << this << "> CONSTRUCTOR" << std::endl;
         std::cout << "t = " << t << ", capacity = " << capacity << ", S = " << &S << std::endl;
+        std::cout << capacity <<  " ELEMENTS CREATED " << std::endl;
         S = new E[capacity];
         t = -1;
     }
@@ -16,10 +17,11 @@ public:
     ~StackArrayFix()
     {
         std::cout << "StackArrayFix<" <<  this <<  "> DESTRUCTOR" << std::endl;
+        std::cout << capacity <<  " ELEMENTS DESTROYED " << std::endl;
         delete[] S;
     }
 
-    void push(const E &e) throw(StackFull)
+    void push(const E &e) noexcept(false)
     {
         if (full())
         {
@@ -31,7 +33,7 @@ public:
         }
     }
 
-    void pop() throw(StackEmpty)
+    void pop() noexcept(false)
     {
         if (!empty())
         {
@@ -41,7 +43,7 @@ public:
             throw StackEmpty("empty stack");
     }
 
-    const E &top() throw(StackEmpty)
+    const E &top() noexcept(false)
     {
         if (!empty())
         {

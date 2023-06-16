@@ -18,9 +18,9 @@ public:
         std::cout << "Stack<" << this << "> DESTRUCTOR" << std::endl;
     }
 
-    virtual void push(const E &e) throw(StackFull) = 0;
-    virtual void pop() throw(StackEmpty) = 0;
-    virtual const E &top() throw(StackEmpty) = 0;
+    virtual void push(const E &e) noexcept(false) = 0;
+    virtual void pop() noexcept(false) = 0;
+    virtual const E &top() noexcept(false) = 0;
     virtual int size() const = 0;
     virtual bool empty() const = 0;
 };

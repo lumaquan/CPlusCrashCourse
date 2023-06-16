@@ -14,13 +14,13 @@ public:
         std::cout << "StackLinkedList<" << this << "> DESTRUCTOR" << std::endl;
     }
 
-    void push(const E &e) throw(StackFull)
+    void push(const E &e) noexcept(false)
     {
         S.addFront(e);
         n++;
     }
 
-    void pop() throw(StackEmpty)
+    void pop() noexcept(false)
     {
         if (!empty())
         {
@@ -31,7 +31,7 @@ public:
             throw StackEmpty("Empty stack!!");
     };
 
-    const E &top() throw(StackEmpty)
+    const E &top() noexcept(false)
     {
         if (!empty())
         {
