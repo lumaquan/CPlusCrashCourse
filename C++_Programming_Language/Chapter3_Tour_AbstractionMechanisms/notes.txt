@@ -1,0 +1,9 @@
+
+
+
+3.2.1 Concrete Types -----------------
+
+"just like built-in types"
+
+For a concrete type it representation is part of its definition.
+
