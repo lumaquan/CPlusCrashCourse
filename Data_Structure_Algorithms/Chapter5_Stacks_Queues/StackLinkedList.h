@@ -12,6 +12,7 @@ public:
     ~StackLinkedList()
     {
         std::cout << "StackLinkedList<" << this << "> DESTRUCTOR" << std::endl;
+        std::cout << std::endl;
     }
 
     void push(const E &e) noexcept(false)
@@ -51,13 +52,17 @@ public:
 private:
     int n;
     SLinkedList<E> S;
+    SNode<E> e;
 };
 
 template <typename E>
 StackLinkedList<E>::StackLinkedList() : n{0}
 {
     std::cout << "StackLinkedList<" << this << "> CONSTRUCTOR" << std::endl;
-    std::cout << "n = " << n << ", linkedlist = " << &S << std::endl;
+    std::cout << "StackLinkedList<n = " << n << ">" << std::endl;
+    std::cout << "StackLinkedList<&n = " << &n << ", &S = " << &S << ">" << std::endl;
+    std::cout << "StackLinkedList<&e = " << &e << ">" << std::endl;
+    std::cout << std::endl;
 }
 
 template <typename E>

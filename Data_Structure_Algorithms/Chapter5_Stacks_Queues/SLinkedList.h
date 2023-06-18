@@ -10,12 +10,16 @@ class SLinkedList
 public:
     SLinkedList() : head{nullptr}
     {
-        std::cout << "SLinkedList<" << this << "> CONSTRUCTOR: head = " << head << std::endl;
+        std::cout << "SLinkedList<" << this << "> CONSTRUCTOR" << std::endl;
+        std::cout << "SLinkedList<head = " << head << ">" << std::endl;
+        std::cout << "SLinkedList<&head = " << &head << ">" << std::endl;
+        std::cout << std::endl;
     }
 
     ~SLinkedList()
     {
         std::cout << "SLinkedList<" << this << "> DESTRUCTOR" << std::endl;
+        std::cout << std::endl;
         while (!empty())
         {
             removeFront();
