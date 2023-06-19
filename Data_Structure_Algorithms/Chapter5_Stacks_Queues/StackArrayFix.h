@@ -3,7 +3,7 @@
 
 template <typename E>
 class StackArrayFix : public Stack<E>
-{   
+{
 public:
     StackArrayFix(int cap) : capacity{cap}, t{-1}
     {
@@ -11,14 +11,14 @@ public:
         std::cout << "StackArrayFix<" << this << "> CONSTRUCTOR" << std::endl;
         std::cout << "StackArrayFix<t = " << t << ", capacity = " << capacity << ", S = " << S << ">" << std::endl;
         std::cout << "StackArrayFix<&t = " << &t << ", &capacity = " << &capacity << ", &S = " << &S << ">" << std::endl;
-        std::cout << "StackArrayFix<" << capacity <<  "> ELEMENTS CREATED " << std::endl;
+        std::cout << "StackArrayFix<" << capacity << "> ELEMENTS CREATED " << std::endl;
         std::cout << std::endl;
     }
 
     ~StackArrayFix()
     {
-        std::cout << "StackArrayFix<" <<  this <<  "> DESTRUCTOR" << std::endl;
-        std::cout << "StackArrayFix<"<< capacity <<  "> ELEMENTS DESTROYED " << std::endl;
+        std::cout << "StackArrayFix<" << this << "> DESTRUCTOR" << std::endl;
+        std::cout << "StackArrayFix<" << capacity << "> ELEMENTS DESTROYED " << std::endl;
         std::cout << std::endl;
         delete[] S;
     }
