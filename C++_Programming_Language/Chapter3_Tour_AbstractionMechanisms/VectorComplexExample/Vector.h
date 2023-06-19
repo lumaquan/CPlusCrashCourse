@@ -7,12 +7,18 @@ class Vector
 {
 private:
     double *S;
-    int sz;
+    size_t sz;
 
 public:
-    Vector(int s = 1) : S{new double[s]}, sz{s}
+    Vector(initializer_list<double> ils = {}) : S{new double[ils.size()]}, sz{ils.size()}
     {
-        cout << "Vector<" << this << ">" << endl;
+        cout << "Vector{}<" << this << ">" << endl;
+        copy(ils.begin(), ils.end(), S);
+    }
+
+    Vector(size_t s) : S{new double[s]}, sz{s}
+    {
+        cout << "Vector(size_t)<" << this << ">" << endl;
         for (int i = 0; i < sz; i++)
         {
             S[i] = 0;
@@ -22,7 +28,7 @@ public:
     // Follows pattern X(const X&)  ( stroustup 17.5.1)
     Vector(const Vector &v) : sz{v.sz}, S{new double[v.sz]}
     {
-        cout << "Vector(copy)<" << this << ">" << endl;
+        cout << "Vector(const Vector &)<" << this << ">" << endl;
         for (int i = 0; i < sz; i++)
         {
             S[i] = v[i];
@@ -32,7 +38,7 @@ public:
     // Follows patter X&operator=(const X&)  ( stroustup 17.5.1)
     Vector &operator=(const Vector &v)
     {
-        cout << "<" << this << ">=<" << &v << ">" << endl;
+        cout << "<" << this << ">operator=(const Vector &)<" << &v << ">" << endl;
         if (v.sz != sz)
         {
             sz = v.sz;
@@ -76,7 +82,7 @@ public:
         }
     }
 
-    int size() const
+    size_t size() const
     {
         return sz;
     }
@@ -87,6 +93,11 @@ public:
 ostream &operator<<(ostream &o, const Vector &v)
 {
     o << "[";
+    if (v.sz == 0)
+    {
+        o << "]";
+        return o;
+    }
     for (int i = 0; i < v.sz - 1; i++)
     {
         o << v[i] << ", ";

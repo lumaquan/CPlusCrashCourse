@@ -5,5 +5,11 @@
 
 "just like built-in types"
 
-For a concrete type it representation is part of its definition.
+For a CONCRETE TYPE it representation is part of its definition.
+
+An ABSTRACT TYPE isolates the user from implementation details.
+
+VIRTUAL means maybe redefined later in a class derived.
+
+POLYMORPHIC TYPE: provides the interface for a variety of other classes.
 
