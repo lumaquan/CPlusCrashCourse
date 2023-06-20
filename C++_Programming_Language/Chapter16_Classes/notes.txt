@@ -1,3 +1,26 @@
+
+
 16.2.7 In-Class Initializers --------------
+
+16.2.8 In-Class Function Definitions -------------
+
+- are considered INLINE 
+- are small, not changing and frequently used
+
+16.2.9 Mutability --------
+ - IMMUTABILITY very useful in multi threaded programs
+
+16.2.9.1 Constant Member Functions ---
+ return_type function(args...) const 
+  - can be called by const ClassType object;
+
+16.2.9.2 Physical and Logical Constness ---
+
+16.2.9.3 mutable ----------
+
+mutable state can be changed by a const member function
+
+
+16.2.9.4 Mutability through Indirection -------
 
 
