@@ -7,9 +7,20 @@
 
 For a CONCRETE TYPE it representation is part of its definition.
 
+3.2.2 Abstract Types ----------------
+
 An ABSTRACT TYPE isolates the user from implementation details.
+
+3.2.3 Virtual Functions ---------------
 
 VIRTUAL means maybe redefined later in a class derived.
 
+VIRTUAL FUNCTION TABLE: 
+- is a table pointing to a function completely named-qualified.
+
 POLYMORPHIC TYPE: provides the interface for a variety of other classes.
 
+3.2.4 Class Hierarchies ---------------
+
+class hierarchies are used to represent hierarchical relationships 
+ 
