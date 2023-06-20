@@ -6,8 +6,16 @@
 template <typename E>
 class StackLinkedList : public Stack<E>
 {
+
 public:
-    StackLinkedList();
+    StackLinkedList() : n{0}
+    {
+        std::cout << "StackLinkedList<" << this << "> CONSTRUCTOR" << std::endl;
+        std::cout << "StackLinkedList<n = " << n << ">" << std::endl;
+        std::cout << "StackLinkedList<&n = " << &n << ", &S = " << &S << ">" << std::endl;
+        std::cout << "StackLinkedList<&e = " << &e << ">" << std::endl;
+        std::cout << std::endl;
+    }
 
     ~StackLinkedList()
     {
@@ -47,28 +55,14 @@ public:
         return S.empty();
     }
 
-    int size() const;
+    int size() const
+    {
+        return n;
+    }
 
 private:
     int n;
     SLinkedList<E> S;
     SNode<E> e;
 };
-
-template <typename E>
-StackLinkedList<E>::StackLinkedList() : n{0}
-{
-    std::cout << "StackLinkedList<" << this << "> CONSTRUCTOR" << std::endl;
-    std::cout << "StackLinkedList<n = " << n << ">" << std::endl;
-    std::cout << "StackLinkedList<&n = " << &n << ", &S = " << &S << ">" << std::endl;
-    std::cout << "StackLinkedList<&e = " << &e << ">" << std::endl;
-    std::cout << std::endl;
-}
-
-template <typename E>
-int StackLinkedList<E>::size() const
-{
-    return n;
-}
-
 #endif

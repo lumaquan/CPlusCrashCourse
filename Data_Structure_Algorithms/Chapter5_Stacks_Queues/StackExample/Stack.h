@@ -11,13 +11,11 @@ public:
     Stack()
     {
         std::cout << "Stack<" << this << "> CONSTRUCTOR" << std::endl;
-        std::cout << std::endl;
     }
 
     virtual ~Stack()
     {
         std::cout << "Stack<" << this << "> DESTRUCTOR" << std::endl;
-        std::cout << std::endl;
     }
 
     virtual void push(const E &e) noexcept(false) = 0;

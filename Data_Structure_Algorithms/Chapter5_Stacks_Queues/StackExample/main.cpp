@@ -4,6 +4,8 @@
 #include "StackArrayFix.h"
 #include "StackLinkedList.h"
 #include <stack>
+#include <vector>
+#include "Util.h"
 
 using namespace std;
 
@@ -51,6 +53,8 @@ void testStack(Stack<double> *stackPtr, int size)
     cout << "size = " << stackPtr->size() << endl;
 }
 
+
+
 int main()
 {
     Stack<double> *stackPtrArr[2];
@@ -65,5 +69,35 @@ int main()
 
     delete stackPtrArr[0];
     delete stackPtrArr[1];
+
+    cout << endl;
+    cout << "StackArrayFix<double> stack1(7): " << endl;
+    StackArrayFix<double> stack1(7);
+    stack1.push(3.14);
+    stack1.push(4.14);
+    stack1.push(5.14);
+    cout << "stack1 = " << stack1 << endl;
+
+    cout << endl;
+    cout << "StackArrayFix<double> stack2(2): " << endl;
+    StackArrayFix<double> stack2(2);
+    stack2.push(1.0);
+    stack2.push(2.0);
+    cout << "stack2 = " << stack2 << endl;
+    cout << "stack2 = stack1 " << endl;
+    stack2 = stack1;
+    cout << "stack2 = " << stack2 << endl;
+
+    cout << endl;
+    cout << "StackArrayFix<double> stack3{stack1}: " << endl;
+    StackArrayFix<double> stack3{stack1};
+    cout << "stack3 = " << stack3 << endl;
+
+    
+    vector<int> vi = {1,2,3,4};
+    printStdVector(vi);
+    reverse(vi);
+    printStdVector(vi);
+
     cout << " MAIN ENDS " << endl;
 }

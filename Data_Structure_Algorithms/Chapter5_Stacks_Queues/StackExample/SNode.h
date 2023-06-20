@@ -16,13 +16,11 @@ class SNode
         std::cout << "SNode<" << this << "> CONSTRUCTOR" << std::endl;
         std::cout << "SNode<e = " << e << ", next = " << next << ">" << std::endl;
         std::cout << "SNode<&e = " << &e << ", &next = " << &next << ">" << std::endl;
-        std::cout << std::endl;
     }
 
     ~SNode()
     {
         std::cout << "SNode<" << this << "> DESTRUCTOR" << std::endl;
-        std::cout << std::endl;
     }
 
     E e;

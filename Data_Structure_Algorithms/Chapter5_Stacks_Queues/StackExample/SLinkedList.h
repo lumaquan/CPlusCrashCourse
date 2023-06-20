@@ -13,13 +13,11 @@ public:
         std::cout << "SLinkedList<" << this << "> CONSTRUCTOR" << std::endl;
         std::cout << "SLinkedList<head = " << head << ">" << std::endl;
         std::cout << "SLinkedList<&head = " << &head << ">" << std::endl;
-        std::cout << std::endl;
     }
 
     ~SLinkedList()
     {
         std::cout << "SLinkedList<" << this << "> DESTRUCTOR" << std::endl;
-        std::cout << std::endl;
         while (!empty())
         {
             removeFront();
