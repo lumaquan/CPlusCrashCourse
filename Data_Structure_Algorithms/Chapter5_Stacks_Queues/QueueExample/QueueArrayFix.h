@@ -11,12 +11,15 @@ class QueueArrayFix : public Queue<E>
         cout << "QueueArrayFix()<" << this << ">" << endl;
     }
 
-    ~QueueArrayFix() 
+    ~QueueArrayFix()
     {
         cout << "~QueueArrayFix()<" << this << ">" << endl;
     }
 
-
+    bool empty()
+    {
+        return n == 0;
+    }
 
 public:
 private:
