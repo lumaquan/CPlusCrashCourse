@@ -11,10 +11,12 @@ class QueueArrayFix : public Queue<E>
         cout << "QueueArrayFix()<" << this << ">" << endl;
     }
 
-    ~QueueArrayFix(int cap) : capacity{cap}, f{0}, r{0}, n{0}, Q{new E[cap]}
+    ~QueueArrayFix() 
     {
         cout << "~QueueArrayFix()<" << this << ">" << endl;
     }
+
+
 
 public:
 private:
